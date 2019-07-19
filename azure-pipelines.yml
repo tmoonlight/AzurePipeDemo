@@ -35,7 +35,7 @@ steps:
 #     platform: '$(buildPlatform)'
 #     configuration: '$(buildConfiguration)'
 - bash: |
-    mkdir ./build/NSPServer
+    mkdir ./build
   displayName: Create build directory
 
 - task: DotNetCoreCLI@2
@@ -43,4 +43,4 @@ steps:
     command: 'publish'
     publishWebProjects: false
     projects: ./AzDemo/AzDemo.csproj'
-    arguments: ' --output ./build/NSPServer'
+    arguments: ' --output ./build'

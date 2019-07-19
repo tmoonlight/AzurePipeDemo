@@ -36,6 +36,7 @@ steps:
 #     configuration: '$(buildConfiguration)'
 - bash: |
     mkdir ./build
+    mkdir ./build/AzDemo
   displayName: Create build directory
 
 - task: DotNetCoreCLI@2

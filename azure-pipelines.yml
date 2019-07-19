@@ -53,5 +53,6 @@ steps:
     script: |
       docker login -u $(dhName) -p $(dhPwd)
       docker build . -t azclient -f dockerfile
+      docker tag azclient tmoonlight/mydemo
       docker push azclient
     workingDirectory: './AzDemo/build/AzDemo/'

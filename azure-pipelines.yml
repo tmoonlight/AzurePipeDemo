@@ -43,4 +43,4 @@ steps:
     command: 'publish'
     publishWebProjects: false
     projects: ./AzDemo/AzDemo.csproj'
-    arguments: ' --output ./build'
+

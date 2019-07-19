@@ -35,12 +35,12 @@ steps:
 #     platform: '$(buildPlatform)'
 #     configuration: '$(buildConfiguration)'
 - bash: |
-    mkdir ./build
+    mkdir ./build/NSPServer
   displayName: Create build directory
 
-# - task: DotNetCoreCLI@2
-#   inputs:
-#     command: 'publish'
-#     publishWebProjects: false
-#     projects: ./src/NSmartProxy.ServerHost/NSmartProxy.ServerHost.csproj'
-#     arguments: ' --output ./build/NSPServer'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: ./AzDemo/AzDemo.csproj'
+    arguments: ' --output ./build/NSPServer'

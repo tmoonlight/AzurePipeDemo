@@ -38,13 +38,14 @@ steps:
     mkdir ./build
     mkdir ./build/AzDemo
   displayName: Create build directory
+  workingDirectory: '$(System.DefaultWorkingDirectory)/'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
     publishWebProjects: false
     projects: './AzDemo/AzDemo.csproj'
-    arguments: ' --output ./build/'
+    arguments: ' --output $(System.DefaultWorkingDirectory)/build/AzDemo'
 
 
 - task: Bash@3

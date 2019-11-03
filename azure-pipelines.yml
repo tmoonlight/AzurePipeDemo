@@ -37,6 +37,7 @@ steps:
 - bash: |
     mkdir ./build
     mkdir ./build/AzDemo
+    mkdir ./publish
   displayName: Create build directory
   workingDirectory: '$(System.DefaultWorkingDirectory)/'
 

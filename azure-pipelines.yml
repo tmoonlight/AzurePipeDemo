@@ -51,8 +51,5 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      docker login -u $(dhName) -p $(dhPwd)
-      docker build . -t azclient -f Dockerfile
-      docker tag azclient tmoonlight/mydemo
-      docker push tmoonlight/mydemo
-    workingDirectory: './AzDemo/build/AzDemo/'
+      wget wget linux-x64.warp-packer
+    workingDirectory: '$(System.DefaultWorkingDirectory)/build/AzDemo/'

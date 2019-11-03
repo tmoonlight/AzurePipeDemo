@@ -46,7 +46,7 @@ steps:
     command: 'publish'
     publishWebProjects: false
     projects: './AzDemo/AzDemo.csproj'
-    arguments: ' --output $(System.DefaultWorkingDirectory)/build/AzDemo -r win-x64 -c Release /p:PublishTrimmed=true'
+    arguments: ' --output $(System.DefaultWorkingDirectory)/build/AzDemo -r linux-x64 -c Release /p:PublishTrimmed=true'
 
 
 - task: Bash@3
